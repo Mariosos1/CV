@@ -21,7 +21,7 @@ const Skills: React.FC = () => {
             className="flex items-start gap-2 text-sm leading-relaxed"
           >
             <FiAward
-              className="text-sky-600 dark:text-sky-400 flex-shrink-0 mt-1"
+              className="text-sky-600 dark:text-sky-400 shrink-0 mt-1"
               size={14}
             />
             <span>{skill}</span>
