@@ -15,7 +15,7 @@ const Languages: React.FC = () => {
       <div className="text-gray-800 dark:text-gray-300 text-sm space-y-3">
         <div className="flex items-center gap-2">
           <HiLanguage
-            className="text-sky-600 dark:text-sky-400 flex-shrink-0"
+            className="text-sky-600 dark:text-sky-400 shrink-0"
             size={18}
           />
           <div>
@@ -25,7 +25,7 @@ const Languages: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 mb-2">
             <HiLanguage
-              className="text-sky-600 dark:text-sky-400 flex-shrink-0"
+              className="text-sky-600 dark:text-sky-400 shrink-0"
               size={18}
             />
             <span>{t.english}:</span>

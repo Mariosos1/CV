@@ -15,7 +15,7 @@ const Education: React.FC = () => {
       <div className="space-y-3">
         <div className="flex items-start gap-2 text-gray-800 dark:text-gray-300 text-sm leading-relaxed">
           <BsBook
-            className="text-sky-600 dark:text-sky-400 flex-shrink-0 mt-1"
+            className="text-sky-600 dark:text-sky-400 shrink-0 mt-1"
             size={18}
           />
           <div>

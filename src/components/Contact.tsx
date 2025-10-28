@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
       <div className="text-gray-800 dark:text-gray-300 text-sm leading-relaxed space-y-2">
         <div className="flex items-center gap-2">
           <HiLocationMarker
-            className="text-sky-600 dark:text-sky-400 flex-shrink-0"
+            className="text-sky-600 dark:text-sky-400 shrink-0"
             size={16}
           />
           <div>Calle Juan Carlos Onetti 13</div>
@@ -28,14 +28,14 @@ const Contact: React.FC = () => {
         </div>
         <div className="flex items-center gap-2 pt-2">
           <BsTelephone
-            className="text-sky-600 dark:text-sky-400 flex-shrink-0"
+            className="text-sky-600 dark:text-sky-400 shrink-0"
             size={16}
           />
           <div>+34 683127718</div>
         </div>
         <div className="flex items-center gap-2">
           <HiMail
-            className="text-sky-600 dark:text-sky-400 flex-shrink-0"
+            className="text-sky-600 dark:text-sky-400 shrink-0"
             size={16}
           />
           <div className="break-all">mariodepablo2005@gmail.com</div>
