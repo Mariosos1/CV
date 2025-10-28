@@ -1,4 +1,3 @@
-import React from "react";
 import CV from "./components/CV";
 import { LanguageProvider } from "./context/LanguageContext";
 import { ThemeProvider } from "./context/ThemeContext";

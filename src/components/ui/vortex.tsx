@@ -36,7 +36,6 @@ export const Vortex = (props: VortexProps) => {
   const xOff = 0.00125;
   const yOff = 0.00125;
   const zOff = 0.0005;
-  const backgroundColor = props.backgroundColor || "#000000";
   let tick = 0;
   const noise3D = createNoise3D();
   let particleProps = new Float32Array(particlePropsLength);
@@ -187,7 +186,7 @@ export const Vortex = (props: VortexProps) => {
 
   const resize = (
     canvas: HTMLCanvasElement,
-    ctx?: CanvasRenderingContext2D
+    _ctx?: CanvasRenderingContext2D
   ) => {
     const container = containerRef.current as HTMLDivElement;
     if (container) {
