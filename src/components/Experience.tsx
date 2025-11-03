@@ -25,7 +25,6 @@ const Experience: React.FC = () => {
             t.resp7,
             t.resp8,
             t.resp9,
-            t.resp10,
           ],
         },
         {

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import profilePhoto from "../assets/FotoCV.jpg";
 
 const Header: React.FC = () => {
   return (
@@ -25,16 +26,25 @@ const Header: React.FC = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-3 mt-4"
+          className="flex flex-wrap gap-2 mt-4"
         >
-          {["React", "Python", "Docker", "DevOps"].map((tech, idx) => (
+          {[
+            "React",
+            "FastAPI",
+            "Docker",
+            "Keycloak",
+            "Zabbix",
+            "Elastic",
+            "Zeek",
+            "Odoo",
+          ].map((tech, idx) => (
             <motion.span
               key={tech}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.3 + idx * 0.1 }}
-              whileHover={{ scale: 1.1 }}
-              className="px-4 py-2 bg-sky-100 dark:bg-sky-900 text-sky-800 dark:text-sky-200 rounded-full text-sm font-medium transition-colors"
+              transition={{ duration: 0.3, delay: 0.3 + idx * 0.05 }}
+              whileHover={{ scale: 1.05 }}
+              className="px-3 py-1.5 bg-sky-100 dark:bg-sky-900 text-sky-800 dark:text-sky-200 rounded-full text-sm font-medium transition-colors hover:bg-sky-200 dark:hover:bg-sky-800"
             >
               {tech}
             </motion.span>
@@ -51,7 +61,7 @@ const Header: React.FC = () => {
       >
         <div className="w-40 h-40 rounded-full border-4 border-sky-400 dark:border-sky-500 overflow-hidden bg-white dark:bg-gray-700 p-1 shadow-xl">
           <img
-            src="https://assets.livecareer.es/photos/p/es/1c/1cc6ea96-dbe2-4ce5-b902-dc445fb09227.jpeg"
+            src={profilePhoto}
             alt="Mario de Pablo Damián"
             className="w-full h-full object-cover rounded-full"
             loading="lazy"

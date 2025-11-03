@@ -9,8 +9,6 @@ export interface TranslationKeys {
   about: string;
   experience: string;
   summary: string;
-  summaryHighlight: string;
-  summaryEnd: string;
   experienceTitle: string;
   experienceCompany: string;
   experiencePeriod: string;
@@ -27,7 +25,6 @@ export interface TranslationKeys {
   resp7: string;
   resp8: string;
   resp9: string;
-  resp10: string;
   resp11: string;
   resp12: string;
   resp13: string;
@@ -47,6 +44,19 @@ export interface TranslationKeys {
   level: string;
   levelDescription: string;
   copyright: string;
+  certReact: string;
+  certFastAPI: string;
+  certOdoo: string;
+  personalProjects: string;
+  blackjackTitle: string;
+  blackjackDesc: string;
+  blackjackStatus: string;
+  emberizeTitle: string;
+  emberizeDesc: string;
+  emberizeStatus: string;
+  gameTitle: string;
+  gameDesc: string;
+  gameStatus: string;
 }
 
 export type Translations = {
@@ -71,11 +81,7 @@ export const translations: Translations = {
 
     // Summary
     summary:
-      "Profesional de software con experiencia en desarrollo web, móvil e integración de sistemas, incluyendo proyectos industriales y personales. Experto en",
-    summaryHighlight:
-      "automatización de procesos, observabilidad industrial y soluciones multicliente",
-    summaryEnd:
-      ", con fuerte capacidad de aprendizaje y orientación a resultados.",
+      "Profesional de software con experiencia en <strong>desarrollo web, móvil e integración de sistemas</strong>, incluyendo proyectos industriales y personales. Utilizo <strong>herramientas de inteligencia artificial</strong> para acelerar el desarrollo, aplicando <strong>validación y revisión crítica</strong> para garantizar la calidad del código. Mi enfoque se centra en la <strong>práctica real</strong> y la <strong>comprensión profunda</strong> de las tecnologías, más allá de certificaciones formales. Me mantengo constantemente actualizado con las <strong>últimas innovaciones y metodologías</strong> del sector para aplicar las mejores prácticas en cada proyecto.",
 
     // Experience
     experienceTitle: "Dev Ops | Fullstack Developer",
@@ -107,8 +113,6 @@ export const translations: Translations = {
       "<strong>Refactorización de código</strong> y propuesta de <strong>mejoras técnicas y arquitectónicas</strong> para optimizar rendimiento y mantenibilidad.",
     resp9:
       "Desarrollo de un entorno <strong>multitenant</strong>, permitiendo gestionar múltiples clientes en una misma infraestructura de forma segura y aislada, <strong>ofreciendo soluciones personalizadas y adaptadas a las necesidades específicas de cada uno</strong>.",
-    resp10:
-      "<strong>Tecnologías:</strong> React, Python, Keycloak, Zabbix, Elastic, Zeek, Docker, GitHub Actions.",
     resp11:
       "Tras identificar deficiencias críticas, asumí un rol activo en el <strong>desarrollo de soluciones</strong>, participando tanto en <strong>frontend como backend</strong>.",
     resp12:
@@ -140,6 +144,28 @@ export const translations: Translations = {
 
     // Footer
     copyright: "© 2025 Mario de Pablo Damián - Fullstack Developer",
+
+    // Certifications
+    certReact: "Formación certificada en React",
+    certFastAPI: "Formación certificada en FastAPI",
+    certOdoo: "Formación certificada en Odoo",
+
+    // Personal Projects
+    personalProjects: "Proyectos Personales",
+    blackjackTitle: "Calculadora de EV - Blackjack",
+    blackjackDesc:
+      "Aplicación móvil que calcula matemáticamente las probabilidades de ganar, perder o empatar en cada mano de blackjack, así como la mejor jugada según las condiciones del momento. Utiliza algoritmos de probabilidad avanzados para optimizar la estrategia de juego.",
+    blackjackStatus:
+      "Funcional en fase alpha, pendiente de implementar sistema de anuncios",
+    emberizeTitle: "Emberize - Red Social Deportiva",
+    emberizeDesc:
+      "Plataforma social tipo Instagram enfocada en deportistas, con funcionalidad de match (similar a Tinder) para encontrar compañeros de entrenamiento. Permite organizar y unirse a eventos deportivos y crear comunidades alrededor del deporte.",
+    emberizeStatus:
+      "Pospuesto indefinidamente por falta de tiempo y financiación",
+    gameTitle: "Juego AAA - MVP",
+    gameDesc:
+      "Desarrollo de un producto mínimo viable de un videojuego AAA en colaboración con un equipo de desarrollo. El objetivo es crear un MVP funcional para atraer inversión o adquirir financiación para expandir el equipo y completar el proyecto.",
+    gameStatus: "En desarrollo activo",
   },
   en: {
     // Header
@@ -157,11 +183,7 @@ export const translations: Translations = {
 
     // Summary
     summary:
-      "Software professional with experience in web, mobile development and systems integration, including industrial and personal projects. Expert in",
-    summaryHighlight:
-      "process automation, industrial observability and multi-client solutions",
-    summaryEnd:
-      ", with strong learning capacity and results-oriented approach.",
+      "Software professional with experience in <strong>web, mobile development and systems integration</strong>, including industrial and personal projects. I leverage <strong>artificial intelligence tools</strong> to accelerate development, applying <strong>validation and critical review</strong> to ensure code quality. My approach focuses on <strong>real-world practice</strong> and <strong>deep understanding</strong> of technologies, beyond formal certifications. I continuously stay updated with the <strong>latest innovations and methodologies</strong> in the industry to apply best practices in every project.",
 
     // Experience
     experienceTitle: "Dev Ops | Fullstack Developer",
@@ -193,8 +215,6 @@ export const translations: Translations = {
       "<strong>Code refactoring</strong> and proposal of <strong>technical and architectural improvements</strong> to optimize performance and maintainability.",
     resp9:
       "Development of a <strong>multitenant</strong> environment, allowing management of multiple clients in the same infrastructure in a secure and isolated way, <strong>offering personalized solutions adapted to the specific needs of each one</strong>.",
-    resp10:
-      "<strong>Technologies:</strong> React, Python, Keycloak, Zabbix, Elastic, Zeek, Docker, GitHub Actions.",
     resp11:
       "After identifying critical deficiencies, I took an active role in <strong>solution development</strong>, participating in both <strong>frontend and backend</strong>.",
     resp12:
@@ -225,5 +245,26 @@ export const translations: Translations = {
 
     // Footer
     copyright: "© 2025 Mario de Pablo Damián - Fullstack Developer",
+
+    // Certifications
+    certReact: "Certified Training in React",
+    certFastAPI: "Certified Training in FastAPI",
+    certOdoo: "Certified Training in Odoo",
+
+    // Personal Projects
+    personalProjects: "Personal Projects",
+    blackjackTitle: "Blackjack EV Calculator",
+    blackjackDesc:
+      "Mobile application that mathematically calculates the probabilities of winning, losing, or tying in each blackjack hand, as well as the best play according to current conditions. Uses advanced probability algorithms to optimize playing strategy.",
+    blackjackStatus:
+      "Functional in alpha phase, pending ad system implementation",
+    emberizeTitle: "Emberize - Sports Social Network",
+    emberizeDesc:
+      "Instagram-like social platform focused on athletes, with match functionality (similar to Tinder) to find training partners. Allows organizing and joining sports events and creating communities around sports.",
+    emberizeStatus: "Indefinitely postponed due to lack of time and funding",
+    gameTitle: "AAA Game - MVP",
+    gameDesc:
+      "Development of a minimum viable product for an AAA video game in collaboration with a development team. The goal is to create a functional MVP to attract investment or secure funding to expand the team and complete the project.",
+    gameStatus: "Active development",
   },
 };
