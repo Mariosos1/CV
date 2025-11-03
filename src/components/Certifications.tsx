@@ -10,6 +10,9 @@ const Certifications: React.FC = () => {
   const certifications = [
     "Cambridge English Level 1 Certificate in ESOL International (First)",
     "Elastic Observability Engineer (On-Demand)",
+    t.certReact,
+    t.certFastAPI,
+    t.certOdoo,
   ];
 
   return (

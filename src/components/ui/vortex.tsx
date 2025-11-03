@@ -14,6 +14,7 @@ interface VortexProps {
   baseRadius?: number;
   rangeRadius?: number;
   backgroundColor?: string;
+  isDarkMode?: boolean;
 }
 
 export const Vortex = (props: VortexProps) => {
@@ -101,7 +102,9 @@ export const Vortex = (props: VortexProps) => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     drawParticles(ctx);
-    renderGlow(canvas, ctx);
+    if (props.isDarkMode) {
+      renderGlow(canvas, ctx);
+    }
     renderToScreen(canvas, ctx);
 
     animationFrameId.current = window.requestAnimationFrame(() =>
@@ -252,6 +255,7 @@ export const Vortex = (props: VortexProps) => {
     props.baseHue,
     props.baseRadius,
     props.rangeRadius,
+    props.isDarkMode,
   ]);
 
   return (

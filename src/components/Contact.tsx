@@ -14,19 +14,15 @@ const Contact: React.FC = () => {
       <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 pb-2 border-b-2 border-sky-300 dark:border-sky-600">
         {t.contact}
       </h3>
-      <div className="text-gray-800 dark:text-gray-300 text-sm leading-relaxed space-y-2">
+      <div className="text-gray-800 dark:text-gray-300 text-sm leading-relaxed space-y-3">
         <div className="flex items-center gap-2">
           <HiLocationMarker
             className="text-sky-600 dark:text-sky-400 shrink-0"
             size={16}
           />
-          <div>Calle Juan Carlos Onetti 13</div>
+          <div>28521, Rivas-Vaciamadrid (Madrid)</div>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-4"></div>
-          <div>28521, Rivas-Vaciamadrid</div>
-        </div>
-        <div className="flex items-center gap-2 pt-2">
           <BsTelephone
             className="text-sky-600 dark:text-sky-400 shrink-0"
             size={16}

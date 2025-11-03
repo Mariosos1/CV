@@ -5,6 +5,7 @@ import Header from "./Header";
 import Contact from "./Contact";
 import Summary from "./Summary";
 import Experience from "./Experience";
+import Projects from "./Projects";
 import Education from "./Education";
 import Skills from "./Skills";
 import Certifications from "./Certifications";
@@ -30,6 +31,7 @@ const CV: React.FC = () => {
         rangeRadius={2}
         className="w-full h-full"
         containerClassName="fixed inset-0 -z-10"
+        isDarkMode={theme === "dark"}
       />
 
       {/* All content on top */}
@@ -52,83 +54,98 @@ const CV: React.FC = () => {
 
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 items-stretch">
             {/* Sidebar - Left Column */}
-            <div className="lg:col-span-1 space-y-6">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5 }}
-                className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
-              >
-                <Contact />
-              </motion.div>
+            <div className="lg:col-span-1 flex flex-col h-full">
+              <div className="flex flex-col justify-between h-full gap-4 lg:gap-6">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
+                >
+                  <Contact />
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
-              >
-                <Education />
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
+                >
+                  <Education />
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
-              >
-                <Skills />
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
+                >
+                  <Skills />
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
-              >
-                <Certifications />
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
+                >
+                  <Certifications />
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
-              >
-                <Languages />
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-6 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
+                >
+                  <Languages />
+                </motion.div>
+              </div>
             </div>
 
             {/* Main Column - Right Side */}
-            <div className="lg:col-span-2 space-y-6">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5 }}
-                className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-8 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
-              >
-                <Summary />
-              </motion.div>
+            <div className="lg:col-span-2 flex flex-col h-full">
+              <div className="flex flex-col justify-between h-full gap-4 lg:gap-6">
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-8 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
+                >
+                  <Summary />
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-8 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
-              >
-                <Experience />
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="bg-white dark:bg-gray-950 rounded-lg shadow-lg p-8 border-l-4 border-sky-400 dark:border-sky-500 hover:shadow-xl transition-all duration-300"
+                >
+                  <Experience />
+                </motion.div>
+              </div>
             </div>
           </div>
+
+          {/* Personal Projects - Full Width */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-12"
+          >
+            <Projects />
+          </motion.div>
         </div>
 
         {/* Footer */}
@@ -141,7 +158,7 @@ const CV: React.FC = () => {
         >
           <div className="max-w-7xl mx-auto px-6 text-center">
             <p className="text-gray-400 dark:text-gray-500">
-              © 2025 Mario de Pablo Damián - Fullstack Developer
+              © 2025 Mario de Pablo Damián
             </p>
           </div>
         </motion.div>

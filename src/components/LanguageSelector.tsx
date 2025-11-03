@@ -22,7 +22,7 @@ const LanguageSelector: React.FC = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-950 border-2 border-sky-400 dark:border-sky-500 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:bg-sky-50 dark:hover:bg-gray-900"
+        className="flex items-center justify-center gap-2 px-4 h-10 bg-white dark:bg-gray-950 border-2 border-sky-400 dark:border-sky-500 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:bg-sky-50 dark:hover:bg-gray-900"
       >
         <span className="font-semibold text-sky-600 dark:text-sky-400 text-sm">
           {currentLang?.name}
